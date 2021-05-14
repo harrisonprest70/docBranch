@@ -1,0 +1,13 @@
+name: 'Branching documentation Generator'
+description: 'Generate documentation for multiple branch in the EagleTRT project'
+author: "eagletrt"
+inputs:
+  branchname:
+    description: 'The name of the branch you want to document'
+    default: 'main'
+    required: false 
+runs:
+  main: 'start.sh'
+branding:
+  icon: 'arrow-up-circle'
+  color: 'green'
