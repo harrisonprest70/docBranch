@@ -19,3 +19,4 @@ git checkout origin/docs
 ls
 
 sed -i "s+<li class=\"toctree-l2\"><a class=\"reference internal\" href=\"{{BRANCHNAME}}/index.html\">{{BRANCHNAME}}</a></li></ul></li></ul></div></div></div></div><footer>+</ul></li></ul></div></div></div></div><footer>+" index.html
+sed -i "s/{{BRANCHNAME}}/$INPUT_BRANCHNAME/" index.html
