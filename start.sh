@@ -18,5 +18,5 @@ git fetch
 git checkout origin/docs
 ls
 
-sed -i "s++<li class=\"toctree-l2\"><a class=\"reference internal\" href=\"$INPUT_BRANCHNAME/index.html\">$INPUT_BRANCHNAME</a></li></ul></li></ul></div></div>+" index.html
+sed -i "s+</ul></li></ul></div></div>+<li class=\"toctree-l2\"><a class=\"reference internal\" href=\"$INPUT_BRANCHNAME/index.html\">$INPUT_BRANCHNAME</a></li></ul></li></ul></div></div>+" index.html
 
