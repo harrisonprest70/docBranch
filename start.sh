@@ -22,5 +22,8 @@ array=($(ls -d */))
 
 git checkout origin/main
 echo ${array[1]} 
-sed -i "s+</ul></li></ul></div></div>+<li class=\"toctree-l2\"><a class=\"reference internal\" href=\"$INPUT_BRANCHNAME/index.html\">$INPUT_BRANCHNAME</a></li></ul></li></ul></div></div>+" index.html
-
+n=0
+while [[ $(array[n]) != "" ]]
+do
+  sed -i "s+</ul></li></ul></div></div>+<li class=\"toctree-l2\"><a class=\"reference internal\" href=\"$(array[n])/index.html\">$(array[n])</a></li></ul></li></ul></div></div>+" upload/index.html
+done
