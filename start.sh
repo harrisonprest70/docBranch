@@ -19,6 +19,6 @@ git checkout origin/docs
 ls
 
 folders=$(ls)
-echo "$folders"
+echo "$folders[1]"
 sed -i "s+</ul></li></ul></div></div>+<li class=\"toctree-l2\"><a class=\"reference internal\" href=\"$INPUT_BRANCHNAME/index.html\">$INPUT_BRANCHNAME</a></li></ul></li></ul></div></div>+" index.html
 
