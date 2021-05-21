@@ -21,6 +21,7 @@ ls
 array=($(ls -d */))
 
 git checkout origin/main
+ls upload
 n=0
 for i in "${array[@]}"
 do
