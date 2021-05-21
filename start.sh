@@ -14,5 +14,6 @@ cd -
 cp -r "docs/_build" "upload"
 mv "upload/_build" "upload/$INPUT_BRANCHNAME"
 
+git fetch
 git checkout docs
 ls
