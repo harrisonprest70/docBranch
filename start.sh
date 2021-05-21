@@ -21,9 +21,10 @@ ls
 array=($(ls -d */))
 
 git checkout origin/main
-echo ${array[1]} 
+n=0
 for i in "${array[@]}"
 do
-  echo ${array[@]} 
-  sed -i "s+</ul></li></ul></div></div>+<li class=\"toctree-l2\"><a class=\"reference internal\" href=\"$(array[@])/index.html\">$(array[@])</a></li></ul></li></ul></div></div>+" upload/index.html
+  echo ${array[@]}
+  sed -i "s+</ul></li></ul></div></div>+<li class=\"toctree-l2\"><a class=\"reference internal\" href=\"$(array[n])/index.html\">$(array[n])</a></li></ul></li></ul></div></div>+" upload/index.html
+  n=$n+1
 done
