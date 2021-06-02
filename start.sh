@@ -26,12 +26,13 @@ first_run=0
 for i in "${array[@]}"
 do 
   if [[ ${array[n]} != "_static/" && ${array[n]} != "docs/" && ${array[n]} != "upload/" && ${array[n]} != "html/" && ${array[n]} != "latex/" ]]; then
+    echo "valore: ${array[n]}"
     if [[ ${array[n]} == "$INPUT_BRANCHNAME/" ]]
     then
       first_run=1;
-      echo "Già disponibile"
+      echo "Already taken"
     fi
-    echo "valore: ${array[n]}"
+    
     sed -i "s+<ul></ul></li></ul></div></div></div></div><footer>+<li class=\"toctree-l2\"><a class=\"reference internal\" href=\"${array[n]}/index.html\">${array[n]}</a></li><ul></ul></li></ul></div></div></div></div><footer>+" upload/index.html
   fi
   n=$n+1
