@@ -24,10 +24,9 @@ git checkout origin/main
 n=0
 first_run=0
 for i in "${array[@]}"
-do
- 
+do 
   if [[ ${array[n]} != "_static/" && ${array[n]} != "docs/" && ${array[n]} != "upload/" && ${array[n]} != "html/" && ${array[n]} != "latex/" ]]; then
-    if [[ ${array[n]} == "$INPUT_BRANCHNAME/"
+    if [[ ${array[n]} == "$INPUT_BRANCHNAME/" ]]
     then
       first_run=1;
       echo "Già disponibile"
