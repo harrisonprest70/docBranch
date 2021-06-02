@@ -11,8 +11,8 @@ if [[ $INPUT_TYPEDOC == "true" ]]
 then
   cp -r "$DIR/typedoc" "$GITHUB_WORKSPACE"
   mv "typedoc" "upload"
-  cp -r "documentation/html" "upload"
-  cp -r "documentation/html-dev" "upload"
+  cp -r "docs/documentation/html" "upload"
+  cp -r "docs/documentation/html-dev" "upload"
 else
   cp -r "$DIR/copytoyourdocsbranch" "$GITHUB_WORKSPACE"
   mv "copytoyourdocsbranch" "upload"
