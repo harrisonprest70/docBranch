@@ -24,9 +24,10 @@ git checkout origin/main
 n=0
 for i in "${array[@]}"
 do
-  echo "valore: ${array[n]}"
-  if [[ "${array[n]}" != "_static/" || "${array[n]}" != "docs/" ]]
+ 
+  if [[ ${array[n]} != "_static/" ]]
   then
+    echo "valore: ${array[n]}"
     sed -i "s+<ul></ul></li></ul></div></div></div></div><footer>+<li class=\"toctree-l2\"><a class=\"reference internal\" href=\"${array[n]}/index.html\">${array[n]}</a></li><ul></ul></li></ul></div></div></div></div><footer>+" upload/index.html
   fi
   n=$n+1
