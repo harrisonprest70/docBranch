@@ -13,6 +13,8 @@ then
   mv "typedoc" "upload"
   cp -r "docs/documentation/html" "upload"
   cp -r "docs/documentation/html-dev" "upload"
+  cd upload 
+  touch .nojekyll
 else
   cp -r "$DIR/copytoyourdocsbranch" "$GITHUB_WORKSPACE"
   mv "copytoyourdocsbranch" "upload"
