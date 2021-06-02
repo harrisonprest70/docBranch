@@ -6,6 +6,10 @@ inputs:
     description: 'The name of the branch you want to document'
     default: 'main'
     required: false 
+  typedoc:
+    description: 'Set to true if you use typedoc documentation'
+    default: 'false'
+    required: false 
 runs:
   using: 'node12'
   main: 'start.js'
