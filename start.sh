@@ -25,7 +25,10 @@ n=0
 for i in "${array[@]}"
 do
   echo "valore: ${array[n]}"
-  sed -i "s+<ul></ul></li></ul></div></div></div></div><footer>+<li class=\"toctree-l2\"><a class=\"reference internal\" href=\"${array[n]}/index.html\">${array[n]}</a></li><ul></ul></li></ul></div></div></div></div><footer>+" upload/index.html
+  if [[ ${array[n]} != "_static/" ]]
+  then
+    sed -i "s+<ul></ul></li></ul></div></div></div></div><footer>+<li class=\"toctree-l2\"><a class=\"reference internal\" href=\"${array[n]}/index.html\">${array[n]}</a></li><ul></ul></li></ul></div></div></div></div><footer>+" upload/index.html
+  fi
   n=$n+1
 done
 cat upload/index.html
