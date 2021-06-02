@@ -25,7 +25,7 @@ n=0
 for i in "${array[@]}"
 do
   echo "valore: ${array[n]}"
-  if [[ ${array[n]} != "_static/" || ${array[n]} != "docs/" || ${array[n]} != "upload/" || ${array[n]} != "html/" || ${array[n]} != "latex/" ]];
+  if [[ ${array[n]} != "_static/" || ${array[n]} != "docs/" ]];
   then
     sed -i "s+<ul></ul></li></ul></div></div></div></div><footer>+<li class=\"toctree-l2\"><a class=\"reference internal\" href=\"${array[n]}/index.html\">${array[n]}</a></li><ul></ul></li></ul></div></div></div></div><footer>+" upload/index.html
   fi
