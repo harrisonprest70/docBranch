@@ -25,7 +25,7 @@ n=0
 for i in "${array[@]}"
 do
   echo "valore: ${array[n]}"
-  sed -i "s+</ul></li></ul></div></div>+<li class=\"toctree-l2\"><a class=\"reference internal\" href=\"${array[n]}/index.html\">${array[n]}</a></li></ul></li></ul></div></div>+" upload/index.html
+  sed -i "s+</ul></div></div></nav>+<li class=\"toctree-l2\"><a class=\"reference internal\" href=\"${array[n]}/index.html\">${array[n]}</a></li></ul></div></div></nav>+" upload/index.html
   n=$n+1
   cat upload/index.html
 done
